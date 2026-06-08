@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: white;
+}
+
+.container{
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.center{
+  text-align: center;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    border-bottom: 2px solid #38bdf8;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav a{
+    color: white;
+    font-size: 18px;
+    margin: 0 15px;
+}
+.nav a:hover {
+  color: #38bdf8;
+}
+
+#banner {
+  padding: 80px 20px;
+}
+
+#banner h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: #38bdf8;
+  text-shadow: 0px 0px 10px rgba(56,189,248,0.7);
+}
+
+.subtitle {
+  font-size: 22px;
+  color: #cbd5e1;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card{
+  background-color: rgba(255,255,255,0.08);
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.card:hover {
+  box-shadow: 0px 8px 20px rgba(56,189,248,0.5);
+}
+
+.card h2{
+  color: #38bdf8;
+}
+
+.card h3 {
+  color: #38bdf8;
+}
+
+.card p {
+  height: 1.6;
+  color: #e2e8f0;
+}
+
+.intro-card {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+#footer {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: rgba(255,255,255,0.08);
+  border-top: 2px solid #38bdf8;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+#footer h3 {
+  color: #38bdf8;
+}
+
+.info-section {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-card ul {
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #e2e8f0;
+}
+
+#output {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+#leftPanel {
+  height: 600px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+#map{
+  height: 600px;
+  border-radius: 20px;
+}
+
+.fitted {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+#chart{
+  width: 90%;
+  margin: 20px auto;
+  min-height: 400px;
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#leftPanel,#map{
+  flex: 1;
+}
