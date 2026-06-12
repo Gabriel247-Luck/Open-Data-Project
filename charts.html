@@ -4,22 +4,29 @@
 <head>
 
   <title>WiFi Statistics</title>
+
   <link href="style.css" rel="stylesheet">
+
   <link href="c3.css" rel="stylesheet">
+
   <script src="helper.js"></script>
   <script src="script.js"></script>
+
   <script src="d3.js"></script>
   <script src="c3.js"></script>
 
 </head>
 
 <body onload="init()">
+
   <nav class="container nav">
+
     <a href="index.html">Home</a>
     <a href="maps.html">Info</a>
     <a href="charts.html">Statistics</a>
 
   </nav>
+
   <div id="banner" class="container center">
 
     <h1>WiFi Statistics</h1>
@@ -29,8 +36,11 @@
   <div class="container">
 
     <select id="chartType">
+
       <option value="bar">Bar</option>
+
       <option value="donut">Donut</option>
+
     </select>
 
     <input type="button"
@@ -38,7 +48,9 @@
            onclick="hotspotsByCity()">
 
   </div>
+
   <div id="output"></div>
 
 </body>
+
 </html>

@@ -1,12 +1,10 @@
-let data, map, mapObj;
+let data, map;
 
 async function init(){
-  let link = "Wifi.json"; //https://data.cityofnewyork.us/resource/yjub-udmw.json?$limit=100"// 
-
+  let link = "Wifi.json";
   let info = await fetch(link);
   data = await info.json();
   let leftPanel = get("leftPanel");
-
   if(leftPanel){
     let build = "";
     for(let i = 0; i < data.length; i++){
@@ -17,7 +15,9 @@ async function init(){
   }
 }
 
+
 function filterBytypeandcity(){
+
   let city = get("city").value;
   let type = get("type").value;
   let leftPanel = get("leftPanel");
@@ -28,6 +28,7 @@ function filterBytypeandcity(){
       build += card(wifi);
     }
   }
+  
   leftPanel.innerHTML = build;
 }
 
@@ -40,7 +41,9 @@ function hotspotsByCity(){
   let staten = 0;
 
   for(let i = 0; i < data.length; i++){
+
     let wifi = data[i];
+
     if(wifi.city == "Queens"){
       queens++;
     }
@@ -59,24 +62,26 @@ function hotspotsByCity(){
   }
 
   let chartData = [
-    ["Queens", queens],
+    ["Queens", queens]
     ["Brooklyn", brooklyn],
     ["Bronx", bronx],
     ["Manhattan", manhattan],
     ["Staten Island", staten]
   ];
 
-   let chartType = get("chartType").value;
+  let chartType =
+    get("chartType").value;
 
-  displayChart( chartData, "output", chartType );
+  displayChart( chartData,"output", chartType);
+
 }
 
 function displayChart(data, chart_id, chart_type){
   let chart = c3.generate({
-     bindto: `#${chart_id}`,
-      data: {
-        columns: data,
-        type: chart_type
+    bindto: `#${chart_id}`,
+    data: {
+      columns: data,
+      type: chart_type
     }
   });
-};
+}

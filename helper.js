@@ -3,22 +3,27 @@ function get(id){
 }
 
 function showMap(lat,lon){
+
   let location = [lat, lon];
-  if(!mapObj){
-      mapObj = L.map("map");
-  } 
-  let map = mapObj.setView(location, 14);
 
-  const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18,
-    attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
-  }).addTo(map);
+  if(!map){
+      map = L.map("map");
+  }
 
-  let marker = L.marker(location).addTo(map);
+  let mapView = map.setView(location, 15);
+
+  const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {
+      maxZoom: 18,
+      attribution:"&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+    }
+  ).addTo(mapView);
+
+  let marker = L.marker(location)
+                .addTo(mapView);
 }
 
-
 function card(info){
-
   let build = `<div class="card fitter">
                   <h5>${info.provider}</h5>
                   <hr>
@@ -31,13 +36,14 @@ function card(info){
                   <p>${info.city}</p>
                   <hr>
                   <p>${info.type}</p>`;
-  if(info.latitude && info.longitude){
 
+  if(info.latitude && info.longitude){
     build += `<input type="button"
                 value="Map"
                 onclick="showMap(${info.latitude},
                 ${info.longitude})">`;
   }
+
   build += `</div>`;
   return build;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <meta charset="utf-8">
@@ -14,7 +15,9 @@
 </head>
 
 <body onload="init()">
+
   <nav class="container nav">
+
     <a href="index.html"> Home </a>
     <a href="maps.html"> Info </a>
     <a href="charts.html"> Statistics </a>
@@ -22,15 +25,19 @@
   </nav>
 
   <div id="banner" class="container center">
+
     <h1>HOTSPOT MAPS</h1>
+
     <p class="subtitle">
       Find WIFI hotspots around New York City.
     </p>
 
   </div>
+
   <div class="container">
 
     <select id="city">
+
       <option value="Queens">Queens</option>
       <option value="Brooklyn">Brooklyn</option>
       <option value="New York">New York</option>
@@ -40,18 +47,28 @@
     </select>
 
     <select id="type">
+
       <option value="Free">Free</option>
       <option value="Limited Free">Limited Free</option>
+
     </select>
 
-    <input type="button" value="Filter"onclick="filterBytypeandcity()">
+    
+
+    <input type="button"
+      value="Filter"
+      onclick="filterBytypeandcity()">
 
   </div>
 
- <div id="output" class="container">
+  <div class="container">
+
     <div id="leftPanel"></div>
+
     <div id="map"></div>
-</div>
+
+  </div>
 
 </body>
+
 </html>

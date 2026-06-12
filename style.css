@@ -83,7 +83,7 @@ body {
   color: #e2e8f0;
 }
 
-.intro-card {
+.intro {
   width: 100%;
   max-width: 900px;
   text-align: center;
@@ -103,19 +103,19 @@ body {
   color: #38bdf8;
 }
 
-.info-section {
+.info {
   display: flex;
   gap: 30px;
   align-items: stretch;
   flex-wrap: wrap;
 }
 
-.info-card {
+.card {
   flex: 1;
   min-width: 300px;
 }
 
-.info-card ul {
+.card ul {
   padding-left: 20px;
   line-height: 1.8;
   color: #e2e8f0;
@@ -127,12 +127,12 @@ body {
   width: 100%;
 }
 
-#leftPanel {
-  height: 600px;
-  overflow-y: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+#leftPanel { 
+   height: 600px; 
+   overflow-y: auto; 
+   display: flex; 
+  flex-wrap: wrap; 
+  gap: 12px; 
 }
 
 #map{
